@@ -1,40 +1,42 @@
-# Task 2 — Simple Calculator
+# Task 2 — Calculator Application
 
-A command-line calculator built in Python for the **CodSoft Python
-Programming Internship**. It supports the four basic arithmetic
-operations and runs in a loop until the user chooses to exit.
+**CodSoft Python Programming Internship**
+
+A simple command-line calculator that prompts the user for two numbers and
+an operator, performs the calculation, and displays the result. Supports
+repeated calculations in a single session and logs every calculation to
+`outputs/calculation_log.txt`.
 
 ## Features
-- Addition, Subtraction, Multiplication, Division
-- Input validation (rejects non-numeric input, handles divide-by-zero)
-- Loops so the user can perform multiple calculations per session
+- Basic arithmetic: addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`)
+- Extras: modulus (`%`) and exponentiation (`**`)
+- Input validation (rejects non-numeric input, handles divide-by-zero gracefully)
+- Loops so the user can perform multiple calculations without restarting
+- Automatic logging of every calculation with a timestamp
+
+## Project Structure
+```
+Task2_Calculator/
+├── calculator.py            # Main application source code
+├── outputs/
+│   └── calculation_log.txt  # Auto-generated log of past calculations
+├── requirements.txt
+└── README.md
+```
 
 ## How to Run
 ```bash
-python calculator.py
+python3 calculator.py
 ```
-No external libraries are required — pure Python standard library.
+No external dependencies are required — only the Python standard library.
 
-## Example Session
+## Example
 ```
-===== SIMPLE CALCULATOR =====
-1. Addition (+)
-2. Subtraction (-)
-3. Multiplication (*)
-4. Division (/)
-5. Exit
-Choose an operation (1-5): 1
-Enter the first number: 12
-Enter the second number: 8
-
+Enter first number (or 'q' to quit): 12
+Choose an operation (+, -, *, /, %, **): +
+Enter second number: 8
 Result: 12.0 + 8.0 = 20.0
 ```
 
-## Files
-| File | Description |
-|------|-------------|
-| `calculator.py` | Main application source code |
-| `README.md` | This file |
-
----
-Part of the **#codsoft** Python Programming virtual internship.
+## Author
+Prashanth S N — CodSoft Virtual Internship (Python Programming), Sept 2026
