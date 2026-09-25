@@ -1,40 +1,44 @@
 # Task 3 — Password Generator
 
-A command-line password generator built in Python for the **CodSoft
-Python Programming Internship**. It creates strong, random passwords of a
-user-specified length, with optional uppercase letters, digits, and
-symbols.
+**CodSoft Python Programming Internship**
+
+A command-line password generator that creates strong, random passwords
+using Python's `secrets` module (cryptographically secure, unlike `random`).
+The user chooses the password length and which character sets to include.
 
 ## Features
-- User specifies password length (minimum 4 characters)
-- Optional inclusion of uppercase letters, digits, and symbols
-- Uses Python's `secrets` module for cryptographically secure randomness
-  (safer than the standard `random` module for security-sensitive uses)
+- User-specified password length (minimum 4 characters)
+- Toggle lowercase, uppercase, digits, and symbols independently
+- Cryptographically secure randomness via `secrets.choice`
+- Optionally save generated passwords to `outputs/generated_passwords.txt`
 - Generate multiple passwords in one session
+
+## Project Structure
+```
+Task3_PasswordGenerator/
+├── password_generator.py         # Main application source code
+├── outputs/
+│   └── generated_passwords.txt   # Auto-generated saved passwords
+├── requirements.txt
+└── README.md
+```
 
 ## How to Run
 ```bash
-python password_generator.py
+python3 password_generator.py
 ```
-No external libraries are required — uses only `secrets` and `string`
-from the Python standard library.
+No external dependencies are required — only the Python standard library.
 
-## Example Session
+## Example
 ```
-===== PASSWORD GENERATOR =====
-Enter desired password length (min 4): 12
-Include uppercase letters? [Y/n]: y
-Include digits? [Y/n]: y
-Include symbols? [Y/n]: y
+Enter desired password length (minimum 4): 12
+Include lowercase letters? (Y/n): y
+Include uppercase letters? (Y/n): y
+Include digits? (Y/n): y
+Include symbols? (y/N): y
 
-Generated Password: aQ8!fL2#zK9$
+Generated Password: e88I9hJ12E7a
 ```
 
-## Files
-| File | Description |
-|------|-------------|
-| `password_generator.py` | Main application source code |
-| `README.md` | This file |
-
----
-Part of the **#codsoft** Python Programming virtual internship.
+## Author
+Prashanth S N — CodSoft Virtual Internship (Python Programming), Sept 2026
